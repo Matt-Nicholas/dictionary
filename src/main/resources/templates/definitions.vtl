@@ -1,0 +1,15 @@
+<h1>Foster's Dictionary</h1>
+<hr>
+<h2>$currentWord</h2>
+
+<ul>
+    #foreach($definition in $definitionArray)
+        <li>$definition</li>
+    #end
+</ul>
+
+<form class="form-control" action="definition.vtl" method="post">
+    <label for="new-definition">Add definition: </label>
+    <input type="text" name="new-definition" required>
+    <button type="submit" class="btn btn-warning btn-sm">Add</button>
+</form>
