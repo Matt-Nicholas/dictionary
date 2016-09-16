@@ -12,11 +12,12 @@ public class App {
     public static void main(String[] args) {
         staticFileLocation("/public");
         String layout = "templates/layout.vtl";
-
-
+        PreSets presets = new PreSets();
+        presets.setWords();
 
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
+            model.put("words", Word.all());
             model.put("template", "templates/index.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
@@ -24,9 +25,8 @@ public class App {
         post("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             Word newWord = new Word(request.queryParams("new-word"));
-            List<Word> words = Word.all();
             model.put("template", "templates/index.vtl");
-            model.put("words", words);
+            model.put("words", Word.all());
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
@@ -47,6 +47,5 @@ public class App {
             model.put("template", "templates/definitions.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
-
     }
 }

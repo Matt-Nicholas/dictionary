@@ -1,4 +1,3 @@
-<hr>
 
 <h2>$word.getWord()</h2>
 <ul>
@@ -6,7 +5,9 @@
       <li>$definition.getDefinition()</li>
     #end
 </ul>
-        <form action='/words/$word.getId()' method='post'>
+        <form action="/words/$word.getId()" method="post">
         <input id="new-definition" name="new-definition" type="text">
-      <button type='submit' class='btn'>Add Definition</button>
+      <button type="submit" class="btn btn-xs">Add Definition</button>
     </form>
+
+<h6><a href="/"><--back to dictionary<--</a></h6>

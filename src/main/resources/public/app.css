@@ -1,7 +1,18 @@
 body{
-    text-align: center:
+    background: #b7d9ff;
 }
 
 h1{
-    color: brown;
+    text-align: center;
+    font-family: cursive;
+}
+footer {
+           background-color: black;
+           width: 100%;
+           bottom: 0;
+           position: fixed;
+       }
+#title{
+    color: #663300;
+
 }

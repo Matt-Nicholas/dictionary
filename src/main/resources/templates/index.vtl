@@ -1,9 +1,8 @@
 <!-- Display Word -->
 #foreach($word in $words)
-<h4><a href="/words/$word.getId()">$word.getWord()</a></h4>
+<h4>$word.getWord()<a href="/words/$word.getId()"><small><em> - see definition</em></small></a></h4>
 #end
-<h2>Add Word: </h2>
-<form action='/' method='post'>
+<form action="/" method="post">
     <input id="new-word" name="new-word" type="text">
-    <button type='submit' class='btn'>Add Word</button>
+    <button type="submit" class="btn btn-xs">Add Word</button>
 </form>
