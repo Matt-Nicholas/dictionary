@@ -1,8 +1,9 @@
-<h1>Foster's Dictionary</h1>
-
-    <!-- Display Word -->
-    <!-- <p><em>index</em></p>
-
-
-
-<!-- Form to add Word -->
+<!-- Display Word -->
+#foreach($word in $words)
+<h4><a href="/words/$word.getId()">$word.getWord()</a></h4>
+#end
+<h2>Add Word: </h2>
+<form action='/' method='post'>
+    <input id="new-word" name="new-word" type="text">
+    <button type='submit' class='btn'>Add Word</button>
+</form>

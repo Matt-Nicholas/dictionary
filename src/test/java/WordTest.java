@@ -3,6 +3,11 @@ import static org.junit.Assert.*;
 
 public class WordTest {
 
+    @After
+    public void tearDown() {
+        Word.clear();
+    }
+
     @Test
     public void word_instantiatesCorrectly_true() {
         Word testWord = new Word("Boolean");
@@ -36,6 +41,12 @@ public class WordTest {
         assertEquals(true, testWord.getDefinitions().contains(definitionTwo));
     }
 
+    @Test
+    public void find_returnsWord_Word(){
+        Word firstWord = new Word("Boolean");
+        Word expectedResult = firstWord;
+        assertEquals(expectedResult, Word.find(0));
+    }
 
 
 }
