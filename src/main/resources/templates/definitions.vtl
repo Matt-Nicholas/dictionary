@@ -2,12 +2,12 @@
 <h2>$word.getWord()</h2>
 <ul>
     #foreach($definition in $word.getDefinitions())
-      <li>$definition.getDefinition()</li>
+    <li>$definition.getDefinition()</li>
     #end
 </ul>
-        <form action="/words/$word.getId()" method="post">
-        <input id="new-definition" name="new-definition" type="text">
-      <button type="submit" class="btn btn-xs">Add Definition</button>
-    </form>
+<form action="/words/$word.getId()" method="post">
+    <input id="new-definition" name="new-definition" type="text">
+    <button type="submit" class="btn btn-xs">Add Definition</button>
+</form>
 
 <h6><a href="/"><--back to dictionary<--</a></h6>

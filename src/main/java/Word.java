@@ -37,5 +37,5 @@ public class Word{
     }
     public static void clear() {
         WORDS.clear();
-  }
+    }
 }

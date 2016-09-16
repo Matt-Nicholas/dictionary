@@ -6,12 +6,14 @@ h1{
     text-align: center;
     font-family: cursive;
 }
+
 footer {
-           background-color: black;
-           width: 100%;
-           bottom: 0;
-           position: fixed;
-       }
+    background-color: black;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
 #title{
     color: #663300;
 
